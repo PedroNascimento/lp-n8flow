@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     siteName: "Agência n8flow",
     images: [
       {
-        url: "/og-image.jpg", // A URL da imagem que vai aparecer no WhatsApp (precisa colocar esse arquivo na pasta public/)
-        width: 1200,
-        height: 630,
+        url: "https://lp.n8flow.com.br/img-logos/icon.png", // A URL da imagem que vai aparecer no WhatsApp (precisa colocar esse arquivo na pasta public/)
+        width: 800,
+        height: 800,
         alt: "Agência n8flow - Capa de Apresentação",
       },
     ],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Agência n8flow | Automação e Crescimento Digital",
     description:
       "Transformamos processos manuais em sistemas inteligentes para clínicas.",
-    images: ["/og-image.jpg"],
+    images: ["https://lp.n8flow.com.br/img-logos/icon.png"],
   },
   robots: {
     index: true,
