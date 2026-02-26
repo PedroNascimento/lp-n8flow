@@ -22,7 +22,7 @@ O grande diferencial deste projeto não é apenas o seu front-end robusto e anim
 
 ## 🎯 Principais Funcionalidades (Features)
 
-- **UI/UX Premium e Dark Mode First:** Design elegante focado na identidade visual _n8flow_ (roleta e roxo neón), com tipografias modernas (`Inter`, `Outfit`, `Poppins`) e legibilidade extrema.
+- **UI/UX Premium e Dark Mode First:** Design elegante focado na identidade visual _n8flow_ (roleta e roxo neón), agora reforçado com elementos de **Glassmorphism**, botões **Pill Shape** e sombras Glow inspiradas em alto padrão de conversão B2B. Tipografias modernas (`Sora` para títulos, `Inter`, `Outfit`, `Poppins`) garantem legibilidade extrema.
 - **Formulário Multi-Step Animado:** Processo de qualificação de leads dividido em três etapas com transições suaves (Framer Motion) e validação em tempo real de cada passo, finalizando com uma tela in-page de confirmação de envio para o painel de atendimento.
 - **Micro-Interações e Scroll Reveals:** O site não é estático; os elementos surgem com animações de _fade-in-up_ atreladas ao scroll da página, prendendo a atenção na leitura do copywriting.
 - **Next.js Server Actions Backend:** Chamadas de webhook feitas do lado do servidor via `actions.ts`. Isso previne bloqueios de CORS por firewalls locais, oculta a URL final do N8N e garante entrega segura de dados corporativos (Lead, Empresa, Segmento, Desafio).
@@ -37,7 +37,10 @@ O grande diferencial deste projeto não é apenas o seu front-end robusto e anim
 
 - **`Framework`**: [Next.js 15](https://nextjs.org/) (App Router, Server Components).
 - **`Language`**: [TypeScript](https://www.typescriptlang.org/) para segurança na tipagem de objetos, propriedades e eventos da UI.
-- **`Styling`**: [Tailwind CSS v4](https://tailwindcss.com/) com paleta nativa `primary` (roxo #6e44ff), `secondary` (ciano #00f0ff) estendidos localmente.
+- **`Styling & Design System`**: [Tailwind CSS v4](https://tailwindcss.com/) com paleta nativa `primary` (roxo #6e44ff), `secondary` (ciano #00f0ff) estendidos localmente. O design system baseia-se em conceitos modernos de UI:
+  - **Glassmorphism**: Componentes translúcidos com bordas leves (`backdrop-blur-md`).
+  - **Pill Buttons**: CTAs totalmente arredondados (`rounded-full`) maximizando a área de clique.
+  - **Glow & Orbs**: Sombras e luzes de fundo intensas atraindo o foco ótico para ofertas.
 - **`Components/Icons`**: [Shadcn UI](https://ui.shadcn.com/) para montagem rápida de UI e [Lucide React](https://lucide.dev/) (iconografia leve em formato vetorial SVG).
 - **`Animations`**: [Framer Motion](https://www.framer.com/motion/) para estados de hover elaborados, layouts condicionalmente montados (`AnimatePresence`) e progressão do formulário.
 
@@ -140,6 +143,7 @@ Para um portfólio este projeto destaca essencialmente habilidades técnicas cha
 2. **Next.js Security:** Ao implementar Server Actions, foi exposto o domínio das métricas de Server-Side Rendering (SSR). Fazer requisições de formulários direto no Node ao invés de usar APIs do lado do navegador `fetch('/api/n8n')`.
 3. **Animação React (`framer-motion`):** Evitou o caos no CSS bruto; usando o Wrapper `<AnimatePresence>` o form não apenas altera o HTML, como exibe desmonte (Exit animations) consistentes perante remoção da DOM Virtual do React 19.
 4. **Resolução de Anomalias Reais:** Solucionar vazamento da UI do form na mobile limitando a caixa Flexbox, e entender o escopo de `Hydration Matching Error` contornando tags `<html>` que as extensões de fora (eg.: Jetski Tool) injetavam dinamicamente.
+5. **Design System Engine:** Replicar as sensações e comportamentos visuais de um Design System complexo (como o da _Danny Hana_) extraindo métricas de UI, como os blurs de Glassmorphism e botões Pill, injetando na Stack do Tailwind de forma otimizada para a Vercel, mantendo 100 de Performance Score (Lighthouse).
 
 ---
 
